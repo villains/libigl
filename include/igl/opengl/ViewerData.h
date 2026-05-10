@@ -305,6 +305,9 @@ public:
   /// Skip lighting and color with RGB = 0.5*N-0.5
   bool pseudocolor_with_normals;
 
+  /// Enable backface culling
+  bool backface_cull;
+
   /// Visualization options
   /// Each option is a binary mask specifying on which viewport each option is set.
   /// When using a single viewport, standard boolean can still be used for simplicity.

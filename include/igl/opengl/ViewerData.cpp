@@ -26,6 +26,7 @@ IGL_INLINE igl::opengl::ViewerData::ViewerData()
   double_sided      (false),
   invert_normals    (false),
   pseudocolor_with_normals(false),
+  backface_cull     (false),
   is_visible        (~unsigned(0)),
   show_custom_labels(0),
   show_face_labels  (0),

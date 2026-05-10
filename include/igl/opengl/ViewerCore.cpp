@@ -213,6 +213,13 @@ IGL_INLINE void igl::opengl::ViewerCore::draw(
       glUniform1f(matcap_factori, is_set(data.use_matcap) ? 1.0f : 0.0f);
       glUniform1f(double_sidedi, data.double_sided ? 1.0f : 0.0f);
       glUniform1i(pseudocolor_with_normalsi, data.pseudocolor_with_normals);
+      if (data.backface_cull) {
+        glEnable(GL_CULL_FACE);
+      }
+      else {
+        glDisable(GL_CULL_FACE);
+      }
+
       data.meshgl.draw_mesh(true);
       glUniform1f(matcap_factori, 0.0f);
       glUniform1f(texture_factori, 0.0f);
